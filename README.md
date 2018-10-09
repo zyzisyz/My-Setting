@@ -1,6 +1,6 @@
 # MY-Setting
 
-back up my personal setting in this repo.
+back up my personal settings in this repo.
 
 ---
 
