@@ -1,0 +1,12 @@
+{
+    "explorer.confirmDelete": false,
+    "editor.fontSize": 18,
+    "files.autoSave": "afterDelay",
+    "editor.formatOnPaste": true,
+    "git.autofetch": true,
+    "editor.smoothScrolling": true,
+    "files.autoGuessEncoding": true,
+    "git.enableSmartCommit": true,
+    
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
+}
