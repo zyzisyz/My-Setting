@@ -9,7 +9,7 @@ inoremap ' ''<ESC>i
 inoremap " ""<ESC>i
 inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
-inoremap { {}<ESC>O
+inoremap { {}<ESC>i
 
 
 " 各种缩进
