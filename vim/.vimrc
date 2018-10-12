@@ -42,10 +42,13 @@ set noswapfile
 set nobackup
 set nowritebackup
 
+
+
 """"""""""""""""""""""""""""""""""""""""""
 "新建.c,.h,.sh,.java文件，自动插入文件头 
 """"""""""""""""""""""""""""""""""""""""""
 autocmd BufNewFile *.cpp,*.sh,*.rb,*.java,*.py exec ":call SetTitle()" 
+
 ""定义函数SetTitle，自动插入文件头 
 func SetTitle() 
 	"如果文件类型为.sh文件 
@@ -54,8 +57,8 @@ func SetTitle()
 		call append(line("."), "") 
 		call append(line(".")+1, "#*************************************************************************")
 		call append(line(".")+2, "#	> File Name: ".expand("%"))
-		call append(line(".")+3, "#	> Author: ") 
-		call append(line(".")+4, "#	> Mail: ") 
+		call append(line(".")+3, "#	> Author: Yang Zhang ") 
+		call append(line(".")+4, "#	> Mail: zyziszy@foxmail.com ") 
 		call append(line(".")+5, "#	> Created Time: ".strftime("%c")) 
 		call append(line(".")+6, "# ************************************************************************/") 
 		call append(line(".")+7, "")
@@ -66,8 +69,8 @@ func SetTitle()
 	    call append(line(".")+1, "")
 		call append(line(".")+2, "# *************************************************************************")
 		call append(line(".")+3, "#	> File Name: ".expand("%"))
-		call append(line(".")+4, "#	> Author: ") 
-		call append(line(".")+5, "#	> Mail: ") 
+		call append(line(".")+4, "#	> Author: Yang Zhang ") 
+		call append(line(".")+5, "#	> Mail: zyziszy@foxmail.com") 
 		call append(line(".")+6, "#	> Created Time: ".strftime("%c")) 
 		call append(line(".")+7, "# ************************************************************************/") 
 		call append(line(".")+8, "") 
@@ -78,8 +81,8 @@ func SetTitle()
 	    call append(line(".")+1, "")
 		call append(line(".")+2, "# *************************************************************************")
 		call append(line(".")+3, "#	> File Name: ".expand("%"))
-		call append(line(".")+4, "#	> Author: ") 
-		call append(line(".")+5, "#	> Mail: ") 
+		call append(line(".")+4, "#	> Author: Yang Zhang ") 
+		call append(line(".")+5, "#	> Mail: zyziszy@foxmail.com ") 
 		call append(line(".")+6, "#	> Created Time: ".strftime("%c")) 
 		call append(line(".")+7, "# ************************************************************************/") 
 		call append(line(".")+8, "")
@@ -87,8 +90,8 @@ func SetTitle()
 	else 
 		call setline(1, "/*************************************************************************") 
 		call append(line("."), "	> File Name: ".expand("%")) 
-		call append(line(".")+1, "	> Author: ") 
-		call append(line(".")+2, "	> Mail: ") 
+		call append(line(".")+1, "	> Author: Yang Zhang ") 
+		call append(line(".")+2, "	> Mail: zyziszy@foxmail.com ") 
 		call append(line(".")+3, "	> Created Time: ".strftime("%c")) 
 		call append(line(".")+4, " ************************************************************************/") 
 		call append(line(".")+5, "")
