@@ -2,24 +2,30 @@
 
 zy win10 config
 
-## java
+## Java
 
-**Tree**
+### Win10 Tree
 
 ```bat
 
 ```
 
-**Path**
+### Win10 Path
 
-```bat
+```sh
 
 ```
 
 ## win10 Theme
 
-**win10 Path**
+### win10 Path
 
 ```bat
 C:\Users\zyzis\AppData\Local\Microsoft\Windows\Themes
+```
+
+### GitHub Tree
+
+```sh
+
 ```
