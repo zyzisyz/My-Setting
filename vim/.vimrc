@@ -9,7 +9,7 @@ inoremap ' ''<ESC>i
 inoremap " ""<ESC>i
 inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
-inoremap { {}<ESC>i
+" inoremap { {}<ESC>i
 
 
 " 各种缩进
@@ -35,7 +35,14 @@ set showcmd         " 输入的命令显示出来，看的清楚些
 filetype on     " 侦测文件类型
 filetype indent on   " 为特定文件类型载入相关缩进文件
 set nocompatible     " 不要使用vi的键盘模式，而是vim自己的
+set fileencodings=utf-8   " utf-8
+set fileformats=unix,dos,mac
 
+"syntax and theme
+colorscheme desert
+set background=dark
+set cursorline
+set cursorcolumn
 
 " 不要交换文件和备份文件，减少冲突"
 set noswapfile
@@ -114,6 +121,10 @@ func SetTitle()
 		call append(line(".")+6,"public class ".expand("%:r"))
 		call append(line(".")+7,"")
 	endif
-	"新建文件后，自动定位到文件末尾
-endfunc 
-autocmd BufNewFile * normal G
+
+	
+endfunc
+autocmd BufNewFile * normal G   " 新建文件后，自动定位到文件末尾
+
+
+
