@@ -16,7 +16,7 @@ conda config --set show_channel_urls yes
 # conda create -n env_name python=3.6
 
 # env remove
-# conda remove -n env_name --all
+# conda remove -n env_name --all -y
 
 # env activate: 
 # source activate env_name
