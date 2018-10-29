@@ -6,15 +6,18 @@
 # -----------------------------------------------------------
 
 
-# rpi_color
+# my rpi color
 # export LS_OPTIONS='--color=auto'
 # eval "`dircolors`"
 # alias ls='ls $LS_OPTIONS'
 # alias ll='ls $LS_OPTIONS -l'
 # alias l='ls $LS_OPTIONS -lA'
 
-# thu cslt lilt's color settings
+# THU cslt lilt's color settings
 # enable color support of ls and also add handy aliases
+export alias ls='ls --color'
+export alias ll='ll -lt --color'
+
 if [ -x /usr/bin/dircolors ]; then
   eval "`dircolors -b`"
   alias ls='ls --color=auto'
