@@ -5,12 +5,25 @@
 # note: NULL
 # -----------------------------------------------------------
 
-# color
-export LS_OPTIONS='--color=auto'
-eval "`dircolors`"
-alias ls='ls $LS_OPTIONS'
-alias ll='ls $LS_OPTIONS -l'
-alias l='ls $LS_OPTIONS -lA'
+
+# rpi_color
+# export LS_OPTIONS='--color=auto'
+# eval "`dircolors`"
+# alias ls='ls $LS_OPTIONS'
+# alias ll='ls $LS_OPTIONS -l'
+# alias l='ls $LS_OPTIONS -lA'
+
+# thu cslt lilt's color settings
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+  eval "`dircolors -b`"
+  alias ls='ls --color=auto'
+  alias dir='dir --color=auto'
+  alias vdir='vdir --color=auto'
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
+fi
 
 # Some more alias to avoid making mistakes:
 alias rm='rm -i'
