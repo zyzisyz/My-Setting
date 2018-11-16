@@ -1,10 +1,6 @@
 # anaconda3
 export PATH="/work4/zhangyang/anaconda3/bin:$PATH"
 
-# cuda-8.0
-export PATH=/work4/zhangsy/cuda-8.0/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/lib64/:/work4/zhangsy/cuda-8.0/lib64:/work4/zhangsy/cuda-8.0/lib:/nfs/disk/work/users/xingchao/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-
 # tf
 alias tf='source activate tf'
 
