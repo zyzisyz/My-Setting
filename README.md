@@ -2,8 +2,6 @@
 
 back up my personal settings in this repo.
 
----
-
 ## Git command
 
 ```bash
@@ -19,6 +17,7 @@ git pull
 git checkout
 git add ${filename}
 git commit -m ${message}
+
 # git remote show origin
 git push origin master
 ```
