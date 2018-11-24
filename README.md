@@ -4,6 +4,25 @@ back up my personal settings in this repo.
 
 ---
 
+## Git command
+
+```bash
+# init
+git init
+git config --global user.name 'zyzisyz'
+git config --global user.email zyziszy@foxmail.com
+
+# git pull = git fetch + git merge
+git pull
+
+# commit
+git checkout
+git add ${filename}
+git commit -m ${message}
+# git remote show origin
+git push origin master
+```
+
 ## vimrc
 
 ```bash
