@@ -1,16 +1,20 @@
 " -----------------------------------
 " Author: Yang Zhang
+
 " Time: 2018-8-5
-" 开始地点: 中国-四川-成都
+" 开始地点: 中国-四川-成都-电子科技大学
+
+" time：2019-4-10
+" 地点：中国-北京-清华大学-FIT-CSLT
 " -----------------------------------
 
 " 自动补全括号等
-inoremap ' ''<ESC>i
-inoremap " ""<ESC>i
-inoremap ( ()<ESC>i
-inoremap [ []<ESC>i
-" inoremap { {}<ESC>i
-inoremap { {<CR>}<ESC>O
+"inoremap ' ''<ESC>i
+"inoremap " ""<ESC>i
+"inoremap ( ()<ESC>i
+"inoremap [ []<ESC>i
+"inoremap { {}<ESC>i
+"inoremap { {<CR>}<ESC>O
 
 
 " 各种缩进
@@ -19,7 +23,7 @@ set softtabstop=4
 set shiftwidth=4
 set autoindent   " 自动缩进
 set cindent
-
+set noexpandtab
 
 " 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）  
 set mouse=a  
