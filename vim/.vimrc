@@ -6,6 +6,9 @@
 
 " time：2019-4-10
 " 地点：中国-北京-清华大学-FIT-CSLT
+
+" time：2019-4-28
+" 地点：中国-北京-北邮-西土城校区-图书馆
 " -----------------------------------
 
 " 自动补全括号等
@@ -155,3 +158,8 @@ func SetTitle()
 	endif
 
 endfunc
+
+" 一键编译运行
+autocmd FileType cpp map <F5> <ESC>:w<CR>:!g++ % && ./a.out<CR>
+autocmd FileType python map <F5> <ESC>:w<CR>:!python %<CR>
+autocmd FileType sh map <F5> <ESC>:w<CR>:!sh %<CR>
