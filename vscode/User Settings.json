@@ -1,12 +1,40 @@
 {
-    "explorer.confirmDelete": false,
-    "editor.fontSize": 18,
-    "files.autoSave": "afterDelay",
-    "editor.formatOnPaste": true,
-    "git.autofetch": true,
-    "editor.smoothScrolling": true,
     "files.autoGuessEncoding": true,
+    "editor.fontSize": 18,
+    "git.autofetch": true,
+    "files.autoSave": "afterDelay",
     "git.enableSmartCommit": true,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
     
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
+    "files.associations": {
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript"
+    },
+    "emmet.includeLanguages": {
+        "wxml": "html"
+    },
+    
+    "minapp-vscode.disableAutoConfig": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "breadcrumbs.enabled": true,
+    "python.jediEnabled": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "C_Cpp.updateChannel": "Insiders",
+    "workbench.colorTheme": "Noctis Sereno",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ],
+        }
+    ],
+    "vim.incsearch": true,
 }
