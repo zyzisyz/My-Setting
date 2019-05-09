@@ -1,22 +1,26 @@
 " -----------------------------------
 " Author: Yang Zhang
 
-" Time: 2018-8-5
+" Time: 2018-08-05
 " 开始地点: 中国-四川-成都-电子科技大学
 
-" time：2019-4-10
+" time：2019-04-10
 " 地点：中国-北京-清华大学-FIT-CSLT
 
-" time：2019-4-28
+" time：2019--4-28
+" 地点：中国-北京-北邮-西土城校区-图书馆
+
+" time：2019-05-06
 " 地点：中国-北京-北邮-西土城校区-图书馆
 " -----------------------------------
 
+
 " 自动补全括号等
-"inoremap ' ''<ESC>i
-"inoremap " ""<ESC>i
-"inoremap ( ()<ESC>i
-"inoremap [ []<ESC>i
-"inoremap { {}<ESC>i
+inoremap ' ''<ESC>i
+inoremap " ""<ESC>i
+inoremap ( ()<ESC>i
+inoremap [ []<ESC>i
+inoremap { {}<ESC>i
 "inoremap { {<CR>}<ESC>O
 
 
@@ -32,8 +36,8 @@ set noexpandtab
 set mouse=a  
 set selection=exclusive  
 set selectmode=mouse,key 
-vnoremap <c-c>   " 选中状态下 Ctrl+c 复制
-nmap <silent> <C-v>  " Ctrl+v
+"vnoremap <c-c>   " 选中状态下 Ctrl+c 复制
+"nmap <silent> <C-v>  " Ctrl+v
 set wildmenu"按TAB键时命令行自动补齐
 set nu     " 显示行号
 set history=2000      " 显示历史纪录
@@ -50,8 +54,6 @@ set cmdheight=2  " 设置命令行的高度为2
 "syntax and theme
 colorscheme desert
 set background=dark
-set cursorline
-set cursorcolumn
 
 " 不要交换文件和备份文件，减少冲突"
 set noswapfile
@@ -83,11 +85,11 @@ func SetTitle()
 		call append(line(".")+8, "")
 		call append(line(".")+9, "")
 
-	" py
-    elseif &filetype == 'python'
-        call setline(1,"#!/usr/bin/env python")
-        call append(line("."),"# coding=utf-8")
-	    call append(line(".")+1, "")
+		" py
+	elseif &filetype == 'python'
+		call setline(1,"#!/usr/bin/env python")
+		call append(line("."),"# coding=utf-8")
+		call append(line(".")+1, "")
 		call append(line(".")+2, "# *************************************************************************")
 		call append(line(".")+3, "#	> File Name: ".expand("%"))
 		call append(line(".")+4, "#	> Author: Yang Zhang ") 
@@ -98,11 +100,11 @@ func SetTitle()
 		call append(line(".")+9, "")
 		call append(line(".")+10, "")
 
-	" ruby
-    elseif &filetype == 'ruby'
-        call setline(1,"#!/usr/bin/env ruby")
-        call append(line("."),"# encoding: utf-8")
-	    call append(line(".")+1, "")
+		" ruby
+	elseif &filetype == 'ruby'
+		call setline(1,"#!/usr/bin/env ruby")
+		call append(line("."),"# encoding: utf-8")
+		call append(line(".")+1, "")
 		call append(line(".")+2, "# *************************************************************************")
 		call append(line(".")+3, "#	> File Name: ".expand("%"))
 		call append(line(".")+4, "#	> Author: Yang Zhang ") 
@@ -112,8 +114,8 @@ func SetTitle()
 		call append(line(".")+8, "")
 		call append(line(".")+9, "")
 		call append(line(".")+10, "")
-	
-	" else / not #
+
+		" else / not #
 	else 
 		call setline(1, "/*************************************************************************") 
 		call append(line("."), "	> File Name: ".expand("%")) 
@@ -163,3 +165,25 @@ endfunc
 autocmd FileType cpp map <F5> <ESC>:w<CR>:!g++ % && ./a.out<CR>
 autocmd FileType python map <F5> <ESC>:w<CR>:!python %<CR>
 autocmd FileType sh map <F5> <ESC>:w<CR>:!sh %<CR>
+
+" esc 快捷键
+imap jj <esc>
+imap kk <esc>
+imap jk <esc>
+imap kj <esc>
+
+"设置跳出自动补全的括号 
+func SkipPair()    
+	if	getline('.')[col('.') - 1] == ')' || getline('.')[col('.') - 1] == ']' || getline('.')[col('.') - 1] == '"' || getline('.')[col('.') - 1] == "'" || getline('.')[col('.') - 1] == '}'
+		return "\<ESC>la"    
+
+	else
+		return "\t"    
+	endif
+endfunc 
+
+" 将tab键绑定为跳出括号 
+inoremap <TAB> <c-r>=SkipPair()<CR>
+
+" 代码折叠
+set foldmethod=indent
