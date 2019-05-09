@@ -41,4 +41,3 @@ wget https://raw.githubusercontent.com/zyzisyz/My-Setting/master/linux/.bashrc
 ## others
 
 1. [conda command](https://raw.githubusercontent.com/zyzisyz/My-Setting/master/conda/conda_config.sh)
-2. [thu-cslt anaconda config](https://raw.githubusercontent.com/zyzisyz/My-Setting/master/conda/cslt-bashrc)
