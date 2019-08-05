@@ -12,6 +12,9 @@
 
 " time：2019-05-06
 " 地点：中国-北京-北邮-西土城校区-图书馆
+
+" time：2019-8-05
+" 地点：中国-北京-北邮-西土城校区-图书馆
 " -----------------------------------
 
 
@@ -31,6 +34,7 @@ set shiftwidth=4
 set autoindent   " 自动缩进
 set cindent
 set noexpandtab
+set smartindent "智能缩进"
 
 " 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）  
 set mouse=a  
