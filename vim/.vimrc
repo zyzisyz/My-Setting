@@ -166,7 +166,7 @@ func SetTitle()
 endfunc
 
 " 一键编译运行
-autocmd FileType cpp map <F5> <ESC>:w<CR>:!g++ % && ./a.out<CR>
+autocmd FileType cpp map <F5> <ESC>:w<CR>:!g++ -std=c++11 % && ./a.out<CR>
 autocmd FileType python map <F5> <ESC>:w<CR>:!python %<CR>
 autocmd FileType sh map <F5> <ESC>:w<CR>:!sh %<CR>
 
