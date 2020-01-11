@@ -1,8 +1,0 @@
-# anaconda3
-export PATH="/work4/zhangyang/anaconda3/bin:$PATH"
-
-# tf
-alias tf='source activate tf'
-
-# pytorch
-alias pytorch='source activate pytorch'
